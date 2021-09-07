@@ -1,0 +1,42 @@
+$blue-bg:#3296fa; //全局蓝色背景
+$gray-bg:#f5f7f9; //全局灰色背景
+$top-main-fs:15px; //顶部标题15大小
+html body{
+  margin: 0;
+  padding: 0;
+}
+// 全局灰色背景
+.gary-bg{
+  background: $gray-bg;
+  height: 100vh;
+}
+// 文本框架
+.marg-box{
+  margin: 0 16px;
+}
+// 15号文本字体
+.fif-fz{
+  font-size: $top-main-fs;
+  font-weight: 200;
+}
+//13号字体
+.thr-fz{
+  font-size: 13px;
+  font-weight: 200;
+}
+//11号字体
+.ele-fz{
+  font-size: 11px;
+  font-weight: 200;
+}
+// 白色文本字体
+.rg{
+  color: #fff;
+}
+.navbar-globle{
+  background: $blue-bg;
+  .van-nav-bar__title , .van-icon-arrow-left {
+    color: #fff;
+    font-size: $top-main-fs;
+  }
+}

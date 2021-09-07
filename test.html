@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+</head>
+<body>
+  
+  
+  <script>
+    // 浅拷贝
+    var obj = {data:{a:1,b:2,c:3}}
+    var newObj = $.extend({},obj)
+    newObj.data.a = 10 
+    console.log(obj);
+    console.log(newObj);
+    // 深拷贝
+    var obj1 = {a:1,b:2,c:3}
+    var newObj1 = $.extend(true,{},obj)
+    newObj1.a = 10 
+    console.log(obj1);
+    console.log(newObj1);
+
+    var p1 = new Promise(function(resolve){
+    setTimeout(function(){
+        console.log("1111")
+            resolve()
+        },4000)
+    })
+
+    function p2(){
+        return new Promise(function(resolve){
+            setTimeout(function(){
+                console.log("2222")
+                resolve()
+            },3000)
+        })
+    }
+    p1.then(function (){
+      return p2()
+    })
+  </script>
+</body>
+</html>
